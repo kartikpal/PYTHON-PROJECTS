@@ -1,0 +1,100 @@
+ROCK PAPER AND SCISSOR GAME
+
+import random
+
+while True:
+    print("Welcome to Rock, Paper and Scissor Game")
+    print('''You can choose:
+1. Rock
+2. Paper
+3. Scissor
+      ''')
+    my_list = ["Rock", "Paper", "Scissor"]
+
+    b = random.choice(my_list)
+
+    a = input("Choose R for Rock , P for Paper , S for Scissor \n")
+
+    if b == "Rock":
+        print(f"Computer chose {b}")
+        print("""
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)""")
+
+    if b == "Paper":
+        print(f"Computer chose {b}")
+        print("""   
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)""")
+
+    if b == "Scissor":
+        print(f"Computer chose {b}")
+        print(""" 
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)""")
+
+    if a == "R":
+        print("You chose Rock")
+        print("""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+""")
+
+        if b == "Rock":
+            print("Game is a Tie")
+        elif b == "Paper":
+            print("You win the Game!!")
+        else:
+            print("You lose the Game")
+
+    if a == "P":
+        print("You chose Paper")
+        print("""   
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)""")
+
+        if b == "Paper":
+            print("Game is a Tie")
+        elif b == "Scissor":
+            print("You win the Game!!")
+        else:
+            print("You lose the Game")
+
+    if a == "S":
+        print("You chose Scissor")
+        print(""" 
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)""")
+
+        if b == "Scissor":
+            print("Game is a Tie")
+        elif b == "Rock":
+            print("You win the Game!!")
+        else:
+            print("You lose the Game")
+
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        print("Thank you for playing the game")
+        break
+
+
